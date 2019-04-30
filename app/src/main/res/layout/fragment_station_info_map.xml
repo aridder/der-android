@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="52dp"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:background="@drawable/layout_station_info"
+        tools:context=".view.fragments.StationInfoMapFragment"
+        android:clickable="true">
+
+    <TextView
+            android:id="@+id/textView_fragment_station_info_number_of_bikes"
+            android:text="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_fragment_station_info_bike_icon"
+            app:layout_constraintTop_toTopOf="@+id/imageView_fragment_station_info_bike_icon"
+            app:layout_constraintStart_toEndOf="@+id/imageView_fragment_station_info_bike_icon"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:id="@+id/textView_fragment_station_info_number_of_locks"
+            android:text="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_fragment_station_info_parking_icon"
+            app:layout_constraintTop_toTopOf="@+id/imageView_fragment_station_info_parking_icon" app:layout_constraintStart_toEndOf="@+id/imageView_fragment_station_info_parking_icon"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:id="@+id/textView_fragment_station_info_station_name"
+            android:text="Station Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginTop="8dp" android:textSize="24sp"/>
+    <TextView
+            android:id="@+id/textView_fragment_station_info_station_address"
+            android:text="Station adress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/textView_fragment_station_info_station_name"
+            app:layout_constraintTop_toBottomOf="@+id/textView_fragment_station_info_station_name"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toEndOf="@+id/textView_fragment_station_info_station_name"/>
+    <TextView
+            android:id="@+id/textView_fragment_station_info_station_id"
+            android:text="170"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toTopOf="@+id/textView_fragment_station_info_station_name"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_directions_bike_black_24dp"
+            android:id="@+id/imageView_fragment_station_info_bike_icon"
+            android:layout_marginEnd="8dp" android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_fragment_station_info_station_address"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.4"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_local_parking_black_24dp"
+            android:id="@+id/imageView_fragment_station_info_parking_icon"
+            app:layout_constraintStart_toEndOf="@+id/textView_fragment_station_info_number_of_bikes"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/textView_fragment_station_info_number_of_bikes"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_fragment_station_info_number_of_bikes"/>
+    <Button
+            android:text="@string/title_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_fragment_station_info_go_to_details_page" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_fragment_station_info_parking_icon"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="64dp"/>
+    <Button
+            android:text="Bysykkel APP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_fragment_station_info_go_to_bysykkel_app"
+            app:layout_constraintTop_toTopOf="@+id/button_fragment_station_info_go_to_details_page"
+            app:layout_constraintBottom_toBottomOf="@+id/button_fragment_station_info_go_to_details_page"
+            app:layout_constraintVertical_bias="0.0" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="64dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
